@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Dashboard com Regex, Axios, Cheerio e SQLite</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Dashboard de Coleta de Dados Web</h1>
+
+    <section class="card">
+
+        <h2>Cadastrar Site</h2>
+
+        <input type="text" id="nome" placeholder="Nome do site">
+
+        <input type="text" id="url" placeholder="URL do site. Ex: https://example.com">
+
+        <input type="text" id="segmento" placeholder="Segmento. Ex: Educação, Tecnologia">
+
+        <button onclick="cadastrarSite()">Cadastrar Site</button>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Sites Cadastrados</h2>
+
+        <div id="listaSites"></div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Dashboard de Coletas</h2>
+
+        <button onclick="carregarDashboard()">Atualizar Dashboard</button>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Site</th>
+
+                    <th>Segmento</th>
+
+                    <th>Data</th>
+
+                    <th>Links</th>
+
+                    <th>Imagens</th>
+
+                    <th>Títulos</th>
+
+                    <th>E-mails</th>
+
+                    <th>Palavras</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaDashboard"></tbody>
+
+        </table>
+
+    </section>
+
+    
+    <section class="card">
+
+        <h2>Palavras-chave mais encontradas</h2>
+
+        <button onclick="carregarPalavras()">Carregar Palavras</button>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Site</th>
+
+                    <th>Palavra</th>
+
+                    <th>Quantidade</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaPalavras"></tbody>
+
+        </table>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
